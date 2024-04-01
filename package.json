@@ -1,0 +1,11 @@
+{
+  "name": "http-server",
+  "version": "1.0.0",
+  "description": "Simple HTTP server using Node.js from scratch",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Shavin Anjitha",
+  "license": "ISC"
+}
