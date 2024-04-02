@@ -1,6 +1,6 @@
 import * as net from "net";
 
-function newCon(socket) {
+function newCon(socket: net.Socket): void {
   console.log("new connection ", socket.remoteAddress, socket.remotePort);
 
   socket.on("end", () => {
@@ -8,7 +8,7 @@ function newCon(socket) {
     console.log("EOF");
   });
 
-  socket.on("data", (data) => {
+  socket.on("data", (data: Buffer) => {
     console.log("data: ", data);
     // echo back the data again
     socket.write(data);
@@ -23,7 +23,7 @@ function newCon(socket) {
 
 // create a RCP server
 let server = net.createServer();
-server.on("error", (err) => {
+server.on("error", (err: Error) => {
   console.log("server error: ", err);
   server.close();
 });
